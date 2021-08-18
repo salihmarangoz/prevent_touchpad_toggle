@@ -21,3 +21,14 @@ bash install.sh
 
 - You can run `python3 $HOME/.local/share/prevent_touchpad_toggle_app/prevent_touchpad_toggle_app.py` or restart the computer. App will start in the system tray.
 
+
+
+## Disable App on Boot
+
+ Run:
+
+```bash
+gnome-session-properties
+```
+
+Disable `prevent_touchpad_toggle_app`

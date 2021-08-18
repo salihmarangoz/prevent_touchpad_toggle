@@ -5,6 +5,8 @@ import os
 import threading
 import time
 
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
 
 ############# GLOBAL PARAMETERS ###################
 threading_delay = 0.25
