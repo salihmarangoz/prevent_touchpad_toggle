@@ -1,3 +1,25 @@
+# Read Before Installing
+
+It may be possible to find touchpad toggle button with **`xmodmap -pk`**. I have listed touchpad related keymaps with **`xmodmap -pk | grep Touch`** and the output is below:
+
+```
+    199     0x1008ffa9 (XF86TouchpadToggle) 0x0000 (NoSymbol)   0x1008ffa9 (XF86TouchpadToggle) 0x0000 (NoSymbol)   0x1008ffa9 (XF86TouchpadToggle) 
+    200     0x1008ffb0 (XF86TouchpadOn) 0x0000 (NoSymbol)   0x1008ffb0 (XF86TouchpadOn) 0x0000 (NoSymbol)   0x1008ffb0 (XF86TouchpadOn) 
+    201     0x1008ffb1 (XF86TouchpadOff)    0x0000 (NoSymbol)   0x1008ffb1 (XF86TouchpadOff)    0x0000 (NoSymbol)   0x1008ffb1 (XF86TouchpadOff)
+```
+
+I have just disabled the `XF86TouchpadToggle` with the keycode 199 via:
+
+```bash
+xmodmap -e 'keycode 199='
+```
+
+This disables touchpad toggle on my laptop, but the names may be different for your laptop model.
+
+**NOTE:** I may rename this repository and change it to use it for accessing hidden keymaps.
+
+
+
 # prevent_touchpad_toggle
 
 ![screenshot](screenshot.png)
